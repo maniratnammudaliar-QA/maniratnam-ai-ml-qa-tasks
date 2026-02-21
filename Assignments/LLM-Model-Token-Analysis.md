@@ -1,4 +1,4 @@
-# LLM Model Token Comparison
+# 1) LLM Model Token Comparison
 
 ## Overview
 This document compares context window, max output tokens, and calculated max input tokens across selected LLM models.
@@ -16,5 +16,11 @@ This document compares context window, max output tokens, and calculated max inp
 | qwen/qwen3-30b-a3b | 41K | 41K | 0K | deepinfra/fp8 |
 
 ---
-
 ## Note:- Max Input Tokens are calculated as (Context Window − Max Output Tokens). Actual usable input depends on the output tokens requested. Input and output tokens share the same context window.
+
+# 2) QWEN - Transformer or MOE?
+
+Qwen models are built on the Transformer architecture.
+The base versions of Qwen 1 and Qwen 2 use a standard dense Transformer, meaning all feed-forward layers are fully activated for every token.
+
+Some newer Qwen 2.5 variants adopt a Mixture of Experts (MoE) design. In MoE models, multiple expert feed-forward networks are defined, but only a subset of experts are activated per token
