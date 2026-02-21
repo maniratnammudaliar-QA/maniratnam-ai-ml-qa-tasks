@@ -20,7 +20,8 @@ This document compares context window, max output tokens, and calculated max inp
 
 # 2) QWEN - Transformer or MOE?
 
-Qwen models are built on the Transformer architecture.
-The base versions of Qwen 1 and Qwen 2 use a standard dense Transformer, meaning all feed-forward layers are fully activated for every token.
+Qwen models are built using the Transformer architecture.
 
-Some newer Qwen 2.5 variants adopt a Mixture of Experts (MoE) design. In MoE models, multiple expert feed-forward networks are defined, but only a subset of experts are activated per token
+The earlier versions like Qwen 1 and Qwen 2 use a regular Transformer model. This means that for every word or token, all parts of the model are used during processing.
+
+Some newer Qwen 2.5 versions use something called Mixture of Experts (MoE). In this design, the model has multiple smaller expert networks, but only a few of them are used for each token instead of the entire model.
