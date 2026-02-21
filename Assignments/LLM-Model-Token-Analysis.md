@@ -25,3 +25,16 @@ Qwen models are built using the Transformer architecture.
 The earlier versions like Qwen 1 and Qwen 2 use a regular Transformer model. This means that for every word or token, all parts of the model are used during processing.
 
 Some newer Qwen 2.5 versions use something called Mixture of Experts (MoE). In this design, the model has multiple smaller expert networks, but only a few of them are used for each token instead of the entire model.
+
+# 3) Moderation Models in Groq
+
+# GPT-OSS-Safeguard-20B:
+A powerful moderation model designed for advanced, customizable safety and policy enforcement in AI applications.
+
+# Llama Prompt Guard 2 (86M):
+A lightweight model that quickly detects unsafe or malicious prompts to protect AI systems.
+
+# Llama Prompt Guard 2 (22M):
+An ultra-fast, low-resource model used for basic safety checks before input reaches the main LLM.
+
+In terms of comparison - GPT-OSS-Safeguard-20B is best for deep and customizable moderation, while Llama Prompt Guard models are best for fast and lightweight safety filtering
